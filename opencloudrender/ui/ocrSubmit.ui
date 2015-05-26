@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1370</width>
-    <height>339</height>
+    <width>992</width>
+    <height>466</height>
    </rect>
   </property>
   <property name="acceptDrops">
@@ -17,756 +17,540 @@
    <string>OpenCloudRender</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTabWidget" name="tabWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>40</y>
-      <width>1370</width>
-      <height>251</height>
-     </rect>
-    </property>
-    <property name="currentIndex">
-     <number>1</number>
-    </property>
-    <property name="movable">
-     <bool>false</bool>
-    </property>
-    <widget class="QWidget" name="submissionTab">
-     <attribute name="title">
-      <string>Submission</string>
-     </attribute>
-     <widget class="QComboBox" name="arnoldVersionComboBox">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>910</x>
-        <y>5</y>
-        <width>100</width>
-        <height>21</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="vrayVersionComboBox">
-      <property name="geometry">
-       <rect>
-        <x>740</x>
-        <y>5</y>
-        <width>100</width>
-        <height>21</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="submitScenesButton">
-      <property name="geometry">
-       <rect>
-        <x>1175</x>
-        <y>110</y>
-        <width>170</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>submit synced scenes</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="mantraVersionComboBox">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>1070</x>
-        <y>5</y>
-        <width>100</width>
-        <height>21</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="syncAssetsButton">
-      <property name="geometry">
-       <rect>
-        <x>1175</x>
-        <y>70</y>
-        <width>170</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>sync assets</string>
-      </property>
-     </widget>
-     <widget class="QTableView" name="scenesTableView">
-      <property name="geometry">
-       <rect>
-        <x>5</x>
-        <y>30</y>
-        <width>1160</width>
-        <height>160</height>
-       </rect>
-      </property>
-      <property name="acceptDrops">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="addScenesButton">
-      <property name="geometry">
-       <rect>
-        <x>1175</x>
-        <y>30</y>
-        <width>170</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>add .vrscene/.ass files</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="arnoldVersionLabel">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>860</x>
-        <y>5</y>
-        <width>45</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Arnold</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="dragDropOnlyLabel">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>5</y>
-        <width>531</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Scenes list - just drag&amp;drop your .vrscene .ifd .hip .ass</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="vrayVersionLabel">
-      <property name="geometry">
-       <rect>
-        <x>700</x>
-        <y>5</y>
-        <width>40</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>V-Ray</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="syncImagesButton">
-      <property name="geometry">
-       <rect>
-        <x>1175</x>
-        <y>150</y>
-        <width>170</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>sync rendered images</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="mantraVersionLabel">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>1020</x>
-        <y>5</y>
-        <width>45</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Mantra</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="defaultVersionLabel">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>560</x>
-        <y>5</y>
-        <width>111</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>default versions:</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="pathStartsWithsLabel">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>195</y>
-        <width>141</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>paths must start with:</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="pathStartsWiths">
-      <property name="geometry">
-       <rect>
-        <x>160</x>
-        <y>195</y>
-        <width>871</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>/localhost,/Users,/home</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="commaSeparatedLabel">
-      <property name="geometry">
-       <rect>
-        <x>1040</x>
-        <y>195</y>
-        <width>121</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>(comma separated)</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="clearTableButton">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>1175</x>
-        <y>190</y>
-        <width>170</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>clear table</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="repoTab">
-     <attribute name="title">
-      <string>Repositories</string>
-     </attribute>
-     <widget class="QPushButton" name="vrayRepoSyncButton">
-      <property name="geometry">
-       <rect>
-        <x>1175</x>
-        <y>30</y>
-        <width>170</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>sync Vray</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="vrayRepoPathGlob">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>34</y>
-        <width>271</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>/localhost/opt/vray/*</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="vrayRepoPathGlobLabel">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>30</y>
-        <width>81</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Vray</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="houdiniRepoPathGlobL">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>74</y>
-        <width>271</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>/localhost/opt/hfs*</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="syncHoudiniRepoButton">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>1175</x>
-        <y>70</y>
-        <width>170</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>sync Houdini</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="houdiniRepoPathGlobLabel">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>70</y>
-        <width>81</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Houdini</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="arnoldRepoPathGlob">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>114</y>
-        <width>271</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>/localhost/opt/arnold/*</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="syncArnoldRepoButton">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>1175</x>
-        <y>110</y>
-        <width>170</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>sync Arnold</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="arnoldRepoPathGlobLabel">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>110</y>
-        <width>81</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Arnold</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="vrayRepoExcludes">
-      <property name="geometry">
-       <rect>
-        <x>850</x>
-        <y>34</y>
-        <width>315</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>docs,include,opensl,samples,scenes</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="vrayRepoExcludesLabel">
-      <property name="geometry">
-       <rect>
-        <x>850</x>
-        <y>5</y>
-        <width>241</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Exclude directories:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="houdiniRepoExcludes">
-      <property name="geometry">
-       <rect>
-        <x>850</x>
-        <y>74</y>
-        <width>315</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>toolkit</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="arnoldRepoExcludes">
-      <property name="geometry">
-       <rect>
-        <x>850</x>
-        <y>114</y>
-        <width>315</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="vrayRepoVersionComboBox">
-      <property name="geometry">
-       <rect>
-        <x>740</x>
-        <y>34</y>
-        <width>100</width>
-        <height>21</height>
-       </rect>
-      </property>
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <property name="text">
-        <string>all</string>
-       </property>
+       <widget class="QLabel" name="dataBucketNameLabel">
+        <property name="text">
+         <string>Data Bucket</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <property name="text">
-        <string>scan...</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLabel" name="localVersionLabel">
-      <property name="geometry">
-       <rect>
-        <x>740</x>
-        <y>5</y>
-        <width>100</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>local version</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="vrayRepoBrowseButton">
-      <property name="geometry">
-       <rect>
-        <x>380</x>
-        <y>30</y>
-        <width>70</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>browse</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="houdiniRepoBrowseButton">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>380</x>
-        <y>70</y>
-        <width>70</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>browse</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="houdiniRepoVersionComboBox">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>740</x>
-        <y>74</y>
-        <width>100</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>all</string>
-       </property>
+       <widget class="QLineEdit" name="dataBucketName"/>
       </item>
       <item>
-       <property name="text">
-        <string>scan...</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QPushButton" name="arnoldRepoBrowseButton">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>380</x>
-        <y>110</y>
-        <width>70</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>browse</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="arnoldRepoVersionComboBox">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>740</x>
-        <y>114</y>
-        <width>100</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>all</string>
-       </property>
+       <widget class="QCheckBox" name="repoBucketCheckBox">
+        <property name="text">
+         <string>Repository Bucket</string>
+        </property>
+       </widget>
       </item>
       <item>
-       <property name="text">
-        <string>scan...</string>
-       </property>
+       <widget class="QLineEdit" name="repoBucketName">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>optional</string>
+        </property>
+       </widget>
       </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="movable">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="submissionTab">
+       <attribute name="title">
+        <string>Submission</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="dragDropOnlyLabel">
+            <property name="text">
+             <string>Scenes list - just drag&amp;drop your .vrscene .ifd .hip .ass</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="defaultVersionLabel">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>default versions:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="vrayVersionLabel">
+            <property name="text">
+             <string>V-Ray</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="vrayVersionComboBox"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="arnoldVersionLabel">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Arnold</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="arnoldVersionComboBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="mantraVersionLabel">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Mantra</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="mantraVersionComboBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <widget class="QTableView" name="scenesTableView">
+          <property name="acceptDrops">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" rowspan="2">
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QPushButton" name="addScenesButton">
+            <property name="text">
+             <string>add .vrscene/.ass files</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="syncAssetsButton">
+            <property name="text">
+             <string>sync assets</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="submitScenesButton">
+            <property name="text">
+             <string>submit synced scenes</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="syncImagesButton">
+            <property name="text">
+             <string>sync rendered images</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clearTableButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>clear table</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="pathStartsWithsLabel">
+            <property name="text">
+             <string>paths must start with:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="pathStartsWiths">
+            <property name="text">
+             <string>/localhost,/Users,/home</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="commaSeparatedLabel">
+            <property name="text">
+             <string>(comma separated)</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="repoTab">
+       <attribute name="title">
+        <string>Repositories</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="3" column="5">
+           <widget class="QComboBox" name="arnoldRepoVersionComboBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <item>
+             <property name="text">
+              <string>all</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>scan...</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="arnoldRepoPathGlob">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>/localhost/opt/arnold/*</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="6">
+           <widget class="QLineEdit" name="arnoldRepoExcludes">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="vrayRepoBrowseButton">
+            <property name="text">
+             <string>browse</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="4">
+           <widget class="QLineEdit" name="houdiniRepoStripPathPrefix">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="7">
+           <widget class="QPushButton" name="syncHoudiniRepoButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>sync Houdini</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="vrayRepoPathGlobLabel">
+            <property name="text">
+             <string>Vray</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="6">
+           <widget class="QLineEdit" name="houdiniRepoExcludes">
+            <property name="text">
+             <string>toolkit</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="7">
+           <widget class="QPushButton" name="syncArnoldRepoButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>sync Arnold</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="houdiniRepoPathGlobL">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>/localhost/opt/hfs*</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="houdiniRepoPathGlobLabel">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Houdini</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QPushButton" name="vrayInstallButton">
+            <property name="text">
+             <string>install</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QLineEdit" name="vrayRepoStripPathPrefix">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="6">
+           <widget class="QLineEdit" name="vrayRepoExcludes">
+            <property name="text">
+             <string>docs,include,opensl,samples,scenes</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="5">
+           <widget class="QComboBox" name="houdiniRepoVersionComboBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <item>
+             <property name="text">
+              <string>all</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>scan...</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QPushButton" name="houdiniRepoBrowseButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>browse</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="arnoldRepoPathGlobLabel">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Arnold</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="7">
+           <widget class="QPushButton" name="vrayRepoSyncButton">
+            <property name="text">
+             <string>sync Vray</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="5">
+           <widget class="QComboBox" name="vrayRepoVersionComboBox">
+            <item>
+             <property name="text">
+              <string>all</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>scan...</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QPushButton" name="arnoldRepoBrowseButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>browse</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="4">
+           <widget class="QLineEdit" name="arnoldRepoStripPathPrefix">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="vrayRepoPathGlob">
+            <property name="text">
+             <string>/localhost/opt/vray/*</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="localRepoPathGlobLabel">
+            <property name="text">
+             <string>Local Linux Repository paths (glob)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="vrayRepoStripPathPrefixLabel">
+            <property name="text">
+             <string>strip path prefix - optional</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QLabel" name="localVersionLabel">
+            <property name="text">
+             <string>local version</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="6">
+           <widget class="QLabel" name="vrayRepoExcludesLabel">
+            <property name="text">
+             <string>Exclude directories:</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>135</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
      </widget>
-     <widget class="QLabel" name="localRepoPathGlobLabel">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>5</y>
-        <width>231</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Local Linux Repository paths (glob)</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="vrayRepoStripPathPrefixLabel">
-      <property name="geometry">
-       <rect>
-        <x>540</x>
-        <y>5</y>
-        <width>181</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>strip path prefix - optional</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="vrayRepoStripPathPrefix">
-      <property name="geometry">
-       <rect>
-        <x>540</x>
-        <y>34</y>
-        <width>191</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="houdiniRepoStripPathPrefix">
-      <property name="geometry">
-       <rect>
-        <x>540</x>
-        <y>74</y>
-        <width>191</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="arnoldRepoStripPathPrefix">
-      <property name="geometry">
-       <rect>
-        <x>540</x>
-        <y>114</y>
-        <width>191</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="vrayInstallButton">
-      <property name="geometry">
-       <rect>
-        <x>460</x>
-        <y>30</y>
-        <width>70</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>install</string>
-      </property>
-     </widget>
-    </widget>
-   </widget>
-   <widget class="QPushButton" name="cancelButton">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>1175</x>
-      <y>290</y>
-      <width>170</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>cancel</string>
-    </property>
-   </widget>
-   <widget class="QProgressBar" name="progressBar">
-    <property name="geometry">
-     <rect>
-      <x>5</x>
-      <y>295</y>
-      <width>1161</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="value">
-     <number>0</number>
-    </property>
-   </widget>
-   <widget class="QLabel" name="dataBucketNameLabel">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>81</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Data Bucket</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="dataBucketName">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>10</y>
-      <width>530</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="repoBucketName">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>835</x>
-      <y>10</y>
-      <width>521</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>optional</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="repoBucketCheckBox">
-    <property name="geometry">
-     <rect>
-      <x>690</x>
-      <y>10</y>
-      <width>140</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Repository Bucket</string>
-    </property>
-   </widget>
+    </item>
+    <item row="2" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QProgressBar" name="progressBar">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="cancelButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>cancel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+   <zorder>tabWidget</zorder>
+   <zorder>cancelButton</zorder>
+   <zorder>progressBar</zorder>
+   <zorder>dataBucketNameLabel</zorder>
+   <zorder>dataBucketName</zorder>
+   <zorder>repoBucketName</zorder>
+   <zorder>repoBucketCheckBox</zorder>
+   <zorder>progressBar</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
